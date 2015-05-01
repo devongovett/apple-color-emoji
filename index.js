@@ -29,7 +29,7 @@ function getImage(str) {
   for (var i = 0; i < str.length; i++)
     name.push(('0000' + str.charCodeAt(i).toString(16)).slice(-4));
     
-  return exports.basePath.replace(/\/$/, '') + '/' + name.join('-') + '.png');
+  return exports.basePath.replace(/\/$/, '') + '/' + name.join('-') + '.png';
 }
 
 // make a regex to test whether an entire string is an emoji
