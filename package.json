@@ -17,5 +17,9 @@
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
     "rimraf": "^2.4.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "prepublish": "node build.js"
   }
 }
