@@ -1,4 +1,3 @@
-require('coffee-script/register')
 var fontkit = require('fontkit');
 var fs = require('fs');
 var rimraf = require('rimraf');
