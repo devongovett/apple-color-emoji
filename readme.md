@@ -1,8 +1,8 @@
 # apple-color-emoji
 
-Extracts emoji images from the Apple Color Emoji font, and generates an regular expression
-that can be used to replace emoji in strings with `<img>` tags if the current platform
-does not have native support.
+Extracts emoji images from the Apple Color Emoji font using [fontkit](http://github.com/devongovett/fontkit), 
+and generates an regular expression that can be used to replace emoji in strings with `<img>` tags if 
+the current browser or platform does not have native support.
 
 ## Installation
 
