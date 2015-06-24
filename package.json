@@ -11,5 +11,11 @@
   "bugs": {
     "url": "https://github.com/devongovett/apple-color-emoji/issues"
   },
-  "homepage": "https://github.com/devongovett/apple-color-emoji"
+  "homepage": "https://github.com/devongovett/apple-color-emoji",
+  "devDependencies": {
+    "fontkit": "^1.0.3",
+    "mkdirp": "^0.5.1",
+    "mocha": "^2.2.5",
+    "rimraf": "^2.4.0"
+  }
 }

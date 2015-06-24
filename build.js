@@ -1,8 +1,14 @@
 require('coffee-script/register')
 var fontkit = require('fontkit');
 var fs = require('fs');
+var rimraf = require('rimraf');
+var mkdirp = require('mkdirp');
 var punycode = require('punycode');
 var regenerate = require('regenerate');
+
+// delete the images directory and re-create it
+rimraf.sync(__dirname + '/images');
+mkdirp.sync(__dirname + '/images');
 
 var font = fontkit.openSync('/System/Library/Fonts/Apple Color Emoji.ttf');
 var set = regenerate();
