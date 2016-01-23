@@ -21,4 +21,18 @@ describe('apple-color-emoji', function() {
   it('should get an image', function() {
     assert.equal(emoji.getImage('😀'), emoji.basePath + '/d83d-de00.png');
   });
+  
+  it('should support flag glyphs', function() {
+    assert.equal(emoji.getImage('🇺🇸'), emoji.basePath + '/d83c-ddfa-d83c-ddf8.png');
+    assert.equal(emoji.getImage('🇦🇽'), emoji.basePath + '/d83c-dde6-d83c-ddfd.png');
+  });
+  
+  it('should support skin tone modifiers', function() {
+    assert.equal(emoji.getImage('👍'), emoji.basePath + '/d83d-dc4d.png');
+    assert.equal(emoji.getImage('👍🏻'), emoji.basePath + '/d83d-dc4d-d83c-dffb.png');
+    assert.equal(emoji.getImage('👍🏼'), emoji.basePath + '/d83d-dc4d-d83c-dffc.png');
+    assert.equal(emoji.getImage('👍🏽'), emoji.basePath + '/d83d-dc4d-d83c-dffd.png');
+    assert.equal(emoji.getImage('👍🏾'), emoji.basePath + '/d83d-dc4d-d83c-dffe.png');
+    assert.equal(emoji.getImage('👍🏿'), emoji.basePath + '/d83d-dc4d-d83c-dfff.png');
+  });
 });
