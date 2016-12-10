@@ -50,7 +50,10 @@ var font = getFont();
 if (font) {
   var REGIONAL_INDICATORS = '🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿'.match(/../g);
   var FEMALE = '\u200D\u2640'
-  var MODIFIERS = ['⃠', '⃣', '🏻', '🏼', '🏽', '🏾', '🏿'];
+  var MODIFIERS = ['\u20E0', '\u20E3',
+  // Skin tones
+  '\ud83c\udffb','\ud83c\udffc','\ud83c\udffd','\ud83c\udffe','\ud83c\udfff'];
+
 
   // write longest characters first so regex works correctly
   // first, the flag glyphs
