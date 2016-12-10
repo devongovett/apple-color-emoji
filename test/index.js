@@ -41,4 +41,12 @@ describe('apple-color-emoji', function() {
     assert.equal(emoji.getImage('🏃‍♀️'), emoji.basePath + '/d83c-dfc3-200d-2640.png');
   });
 
+  it("should support female + skin tone modifiers", function() {
+    assert.equal(emoji.getImage('🏃‍♀️'), emoji.basePath + '/d83c-dfc3-200d-2640.png');
+    assert.equal(emoji.getImage('🏃🏻‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffb-200d-2640.png');
+    assert.equal(emoji.getImage('🏃🏼‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffc-200d-2640.png');
+    assert.equal(emoji.getImage('🏃🏽‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffd-200d-2640.png');
+    assert.equal(emoji.getImage('🏃🏾‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffe-200d-2640.png');
+    assert.equal(emoji.getImage('🏃🏿‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dfff-200d-2640.png');
+  });
 });
