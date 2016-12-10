@@ -49,7 +49,8 @@ function writeImage(glyph, unicode_characters) {
 var font = getFont();
 if (font) {
   var REGIONAL_INDICATORS = '🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿'.match(/../g);
-  var MODIFIERS = ['⃠', '⃣', '🏻', '🏼', '🏽', '🏾', '🏿'];
+  var femaleModifier = "\u200D\u2640"
+  var MODIFIERS = ['⃠', '⃣', '🏻', '🏼', '🏽', '🏾', '🏿', femaleModifier];
 
   // write longest characters first so regex works correctly
   // first, the flag glyphs
