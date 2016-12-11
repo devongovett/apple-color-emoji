@@ -49,7 +49,11 @@ function writeImage(glyph, unicode_characters) {
 var font = getFont();
 if (font) {
   var REGIONAL_INDICATORS = '🇦🇧🇨🇩🇪🇫🇬🇭🇮🇯🇰🇱🇲🇳🇴🇵🇶🇷🇸🇹🇺🇻🇼🇽🇾🇿'.match(/../g);
-  var MODIFIERS = ['⃠', '⃣', '🏻', '🏼', '🏽', '🏾', '🏿'];
+  var FEMALE = '\u200D\u2640'
+  var MODIFIERS = ['\u20E0', '\u20E3',
+  // Skin tones
+  '\ud83c\udffb','\ud83c\udffc','\ud83c\udffd','\ud83c\udffe','\ud83c\udfff'];
+
 
   // write longest characters first so regex works correctly
   // first, the flag glyphs
@@ -65,13 +69,20 @@ if (font) {
 
   font.characterSet.forEach(function(codePoint) {
     MODIFIERS.forEach(function(modifier) {
-      var glyphs = font.layout(punycode.ucs2.encode([codePoint]) + modifier).glyphs;
-      if (glyphs.length === 1) {
-        writeImage(glyphs[0]);
-      }
+      writeImageIfNecessary(codePoint, modifier + FEMALE);
+      writeImageIfNecessary(codePoint, modifier);
     });
+    writeImageIfNecessary(codePoint, FEMALE);
     writeImage(font.glyphForCodePoint(codePoint));
   });
+
+  function writeImageIfNecessary(codePoint, modifier) {
+    var glyphs = font.layout(punycode.ucs2.encode([codePoint]) + modifier).glyphs;
+
+    if (glyphs.length === 1) {
+      writeImage(glyphs[0]);
+    }
+  }
 
   // write the generated regex to a file to be included by the runtime module
   fs.writeFileSync(__dirname + '/regex.js',
