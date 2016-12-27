@@ -38,15 +38,15 @@ describe('apple-color-emoji', function() {
 
   it("should support female modifers", function() {
     assert.equal(emoji.getImage('🏃'), emoji.basePath + '/d83c-dfc3.png');
-    assert.equal(emoji.getImage('🏃‍♀️'), emoji.basePath + '/d83c-dfc3-200d-2640.png');
+    assert.equal(emoji.getImage('🏃‍♀️'), emoji.basePath + '/d83c-dfc3-2640.png');
   });
 
   it("should support female + skin tone modifiers", function() {
-    assert.equal(emoji.getImage('🏃‍♀️'), emoji.basePath + '/d83c-dfc3-200d-2640.png');
-    assert.equal(emoji.getImage('🏃🏻‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffb-200d-2640.png');
-    assert.equal(emoji.getImage('🏃🏼‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffc-200d-2640.png');
-    assert.equal(emoji.getImage('🏃🏽‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffd-200d-2640.png');
-    assert.equal(emoji.getImage('🏃🏾‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffe-200d-2640.png');
-    assert.equal(emoji.getImage('🏃🏿‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dfff-200d-2640.png');
+    assert.equal(emoji.getImage('🏃‍♀️'), emoji.basePath + '/d83c-dfc3-2640.png');
+    assert.equal(emoji.getImage('🏃🏻‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffb-2640.png');
+    assert.equal(emoji.getImage('🏃🏼‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffc-2640.png');
+    assert.equal(emoji.getImage('🏃🏽‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffd-2640.png');
+    assert.equal(emoji.getImage('🏃🏾‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffe-2640.png');
+    assert.equal(emoji.getImage('🏃🏿‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dfff-2640.png');
   });
 });
