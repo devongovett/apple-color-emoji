@@ -1,6 +1,6 @@
 {
   "name": "apple-color-emoji",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Replace emoji in your strings with images from the Apple Color Emoji font",
   "repository": {
     "type": "git",
