@@ -16,7 +16,7 @@
     "fontkit": "^1.5.0",
     "mkdirp": "^0.5.1",
     "mocha": "^2.2.5",
-    "regexgen": "^1.1.0",
+    "regexgen": "^1.2.3",
     "rimraf": "^2.4.0"
   },
   "scripts": {
