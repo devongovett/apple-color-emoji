@@ -49,4 +49,8 @@ describe('apple-color-emoji', function() {
     assert.equal(emoji.getImage('🏃🏾‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dffe-2640.png');
     assert.equal(emoji.getImage('🏃🏿‍♀️'), emoji.basePath + '/d83c-dfc3-d83c-dfff-2640.png');
   });
+
+  it("supports new zero width joiner emoji", function () {
+    assert.equal(emoji.getImage('👨🏻‍⚕️'), emoji.basePath + '/d83c-dfc3-2640.png'); //FIXME this path is not quite right.
+  });
 });
