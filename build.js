@@ -25,7 +25,7 @@ if (font) {
   for (let i = 0; i < font.numGlyphs; i++) {
     let glyph = font.getGlyph(i);
     let strings = font.stringsForGlyph(i);
-    let image = glyph.getImageForSize(96);
+    let image = glyph.getImageForSize(160);
 
     if (image && strings.length > 0) {
       // Add strings to regex
