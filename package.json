@@ -1,6 +1,8 @@
 {
   "name": "apple-color-emoji",
   "version": "1.0.1",
+  "main": "index.js",
+  "browser": "index.client.mjs",
   "description": "Replace emoji in your strings with images from the Apple Color Emoji font",
   "repository": {
     "type": "git",
